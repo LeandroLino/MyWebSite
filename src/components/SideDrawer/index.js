@@ -4,14 +4,18 @@ const Header = () => {
     switch (mode) {
       case "Linkedin":
         window.open("https://www.linkedin.com/in/leandro-lino/");
+        break;
       case "Github":
         window.open("https://github.com/LeandroLino/");
+        break;
       case "Gitlab":
         window.open("https://gitlab.com/LeandroLino/");
+        break;
       case "Email":
         window.open(
           "https://drive.google.com/file/d/1kPtOdJSq-sgva8GUVvQRXBjIUNshL3jZ/view?usp=sharing"
         );
+        break;
     }
   };
   return (

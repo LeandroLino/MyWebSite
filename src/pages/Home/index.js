@@ -1,6 +1,7 @@
 import HomeScreen from "components/Home";
 import About from "components/About";
 import Technologies from "components/Technologies";
+import Carroussel from "components/Carroussel";
 
 const Home = ({ children }) => {
   return (
@@ -8,6 +9,7 @@ const Home = ({ children }) => {
       <HomeScreen />
       <About />
       <Technologies />
+      <Carroussel />
     </>
   );
 };
