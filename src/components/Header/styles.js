@@ -3,7 +3,7 @@ import styled from "styled-components";
 const HeaderContainer = styled.header`
   width: 100vw;
   height: 77px;
-  background-color: ${(props) => (props.navBar ? "#161616" : " #222")};
+  background-color: ${(props) => (props.navBar ? "#111" : " #222")};
   transition: background-color 0.5s;
   position: fixed;
   top: 0;

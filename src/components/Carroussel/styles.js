@@ -20,7 +20,7 @@ const Container = styled.div`
 Container.Item = styled.div`
   width: 50%;
   height: 50%;
-
+  background-color: #fff;
   @media screen and (max-width: 900px) {
     width: 65%;
     height: 55%;
@@ -66,21 +66,11 @@ Container.Item = styled.div`
   }
   > span:first-child {
     > img {
-      @keyframes slidein {
-        from {
-          margin-left: 100%;
-          width: 300%;
-        }
-
-        to {
-          margin-left: 0%;
-          width: 100%;
-        }
-      }
       transform: rotate(-180deg);
     }
     position: absolute;
     left: 0;
+    z-index: 5;
   }
   > span:last-child {
     position: absolute;
@@ -89,12 +79,34 @@ Container.Item = styled.div`
 
   > .Name {
     position: absolute;
-    bottom: 0;
+    bottom: 15px;
+    z-index: 5;
+    color: #fcba03;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
   }
   > img {
     cursor: pointer;
     width: 100%;
     height: 100%;
+  }
+  .Secondary {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  .Primary {
+    animation: 1.5s slidein;
+    @keyframes slidein {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
   }
   font-size: 1.2em;
   color: #fff;

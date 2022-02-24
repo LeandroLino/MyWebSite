@@ -30,16 +30,24 @@ const Carroussel = () => {
         <span onClick={() => showNewItem("remove")}>
           <img src={Arrow}></img>
         </span>
-        <div
-          onClick={() => window.open(itens[currentItem].link)}
-          className="Name"
-        >
-          {itens[currentItem].name}
-        </div>
-        <img
-          onClick={() => window.open(itens[currentItem].link)}
-          src={itens[currentItem].image}
-        ></img>
+        {itens.map((value, index) => (
+          <>
+            {currentItem == index ? (
+              <>
+                <div onClick={() => window.open(value.link)} className="Name">
+                  {value.name}
+                </div>
+                <img
+                  className="Primary"
+                  onClick={() => window.open(value.link)}
+                  src={value.image}
+                ></img>
+              </>
+            ) : (
+              <img className="Secondary" src={value.image}></img>
+            )}
+          </>
+        ))}
         <span onClick={() => showNewItem("add")}>
           <img src={Arrow}></img>
         </span>
