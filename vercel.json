@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+      {"source": "/", "destination": "https://my-web-site-xi.vercel.app/"},
+      {"source": "/velha", "destination": "https://jogo-da-velha-silk.vercel.app/"}
+    ]
+  }
