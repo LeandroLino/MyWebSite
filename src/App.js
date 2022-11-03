@@ -1,17 +1,27 @@
+import GetLocation from "./components/GetLocation";
 import Header from "./components/Header";
 import SideDrawer from "./components/SideDrawer";
 import Home from "./pages/Home";
+import Amor from "./pages/Amor";
+import { Route, Routes, BrowserRouter as Router, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
-  console.error(
-    "%c O que você busca por aqui?",
-    "font-size: 50px; text-transform: uppercase; color: white; text-shadow: 2px 2px red, 4px 4px orange, 6px 6px yellow, 8px 8px green, 10px 10px blue, 12px 12px purple;"
-  );
+  const [location, setLocation] = useState({})
   return (
     <div>
-      <Header />
-      <SideDrawer />
-      <Home />
+      <Router>
+      <GetLocation setLocation={setLocation}/>
+        {location.pathname != "/amor" && 
+          <>
+            <Header />
+            <SideDrawer />
+          </>}
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/amor" element={<Amor />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

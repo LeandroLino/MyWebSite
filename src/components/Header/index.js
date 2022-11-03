@@ -2,7 +2,6 @@ import { useState } from "react";
 import HeaderContainer from "./styles";
 const Header = () => {
   const [navBar, setNav] = useState(false);
-
   const viewScroll = () => {
     if (window.scrollY >= 100) {
       setNav(true);

@@ -10,7 +10,6 @@ import Mysql from "assets/Technologies/Mysql.svg";
 import MongoDb from "assets/Technologies/MongoDb.svg";
 import Postgresql from "assets/Technologies/Postgresql.svg";
 import TechCard from "components/TechCard";
-import { useState } from "react";
 
 const Technologies = () => {
   const techs = [
