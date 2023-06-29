@@ -3,6 +3,7 @@ import JS from "assets/Technologies/Javascript.svg";
 import Html from "assets/Technologies/Html.png";
 import CSS from "assets/Technologies/CSS.png";
 import Python from "assets/Technologies/Python.png";
+import Clojure from "assets/Technologies/Clojure.png";
 import Django from "assets/Technologies/Django.png";
 import React from "assets/Technologies/React.png";
 import Vue from "assets/Technologies/Vue.png";
@@ -14,6 +15,7 @@ import TechCard from "components/TechCard";
 const Technologies = () => {
   const techs = [
     { name: "JS", icon: JS, placeHolder: "Javascript" },
+    { name: "Clojure", icon: Clojure, placeHolder: "Clojure" },
     { name: "REACT", icon: React, placeHolder: "React.js" },
     { name: "VUE", icon: Vue, placeHolder: "Vue.js" },
     { name: "CSS", icon: CSS, placeHolder: "CSS3" },
