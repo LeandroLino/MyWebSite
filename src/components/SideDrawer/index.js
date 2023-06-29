@@ -13,7 +13,7 @@ const Header = () => {
         break;
       case "Email":
         window.open(
-          "https://drive.google.com/file/d/1J4vZ_WBGJyg2ISmJYB0sPdNFZcz5H0vQ/view?usp=sharing"
+          "https://drive.google.com/file/d/1EkRYvWPrI6sWWjUd0kqY9QXl1JO4bILZ/view?usp=sharing"
         );
         break;
     }
