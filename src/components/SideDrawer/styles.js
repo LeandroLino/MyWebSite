@@ -5,6 +5,8 @@ import { ReactComponent as Gitlab } from "../../assets/Gitlab.svg";
 import { ReactComponent as Email } from "../../assets/Email.svg";
 
 const DrawerContainer = styled.div`
+  z-index: 1;
+
   display: flex;
   justify-content: center;
   align-items: center;

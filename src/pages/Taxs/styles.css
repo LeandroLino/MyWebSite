@@ -1,0 +1,18 @@
+.container {
+  padding: 24px;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #fcba03;
+  color: white !important;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+  color: white !important;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-content {
+  border-color: #fcba03;
+}
