@@ -3,7 +3,7 @@ import { Input, Button, Card, Collapse, Typography, message } from "antd";
 import { CopyOutlined, CheckOutlined } from "@ant-design/icons";
 import "./styles.css"; // Importando o arquivo CSS
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 const { Panel } = Collapse;
 
 const InstallmentCalculator = () => {
@@ -74,11 +74,19 @@ const InstallmentCalculator = () => {
 
   return (
     <div className="container">
-      <Title level={2} style={{ textAlign: "center", marginTop: "100px", marginBottom: "24px" }}>
+      <Title
+        level={2}
+        style={{
+          textAlign: "center",
+          marginTop: "100px",
+          marginBottom: "24px",
+          fontSize: "24px", // Tamanho menor para mobile
+        }}
+      >
         Calculadora de Parcelas com Juros
       </Title>
 
-      <Card style={{ maxWidth: "400px", margin: "0 auto" }}>
+      <Card style={{ maxWidth: "400px", margin: "0 auto", width: "90%" }}>
         <Input
           type="number"
           value={totalAmount}
@@ -104,21 +112,23 @@ const InstallmentCalculator = () => {
           type="primary"
           block
           onClick={calculateInstallments}
-          style={{ backgroundColor: "#fcba03", borderColor: "#fcba03" }}
+          style={{ backgroundColor: "rgb(252, 186, 3)", borderColor: "rgb(252, 186, 3)" }}
         >
           Calcular
         </Button>
       </Card>
 
       {installmentList.length > 0 && (
-        <Card style={{ maxWidth: "600px", margin: "24px auto" }}>
-          <Title level={4}>Detalhes das Parcelas:</Title>
+        <Card style={{ maxWidth: "600px", margin: "24px auto", width: "90%" }}>
+          <Title level={4} style={{ fontSize: "20px" }}> {/* Tamanho menor para mobile */}
+            Detalhes das Parcelas:
+          </Title>
           <Collapse accordion>
             {installmentList.map((installment, index) => (
               <Panel
                 header={`Parcela ${installment.number} - R$ ${installment.installmentValue}`}
                 key={index + 1}
-                style={{ borderColor: "#fcba03" }}
+                style={{ borderColor: "rgb(252, 186, 3)" }}
               >
                 <p>
                   <strong>Juros da Parcela:</strong> R$ {installment.interest}
@@ -131,7 +141,9 @@ const InstallmentCalculator = () => {
           </Collapse>
 
           <div style={{ marginTop: "24px" }}>
-            <Title level={4}>Resumo:</Title>
+            <Title level={4} style={{ fontSize: "20px" }}> {/* Tamanho menor para mobile */}
+              Resumo:
+            </Title>
             <p>
               <strong>Total de Juros Pagos:</strong> R$ {totalInterest}
             </p>
@@ -147,8 +159,8 @@ const InstallmentCalculator = () => {
             onClick={copyInstallments}
             style={{
               marginTop: "16px",
-              backgroundColor: isCopied ? "#f0f2f5" : "#fcba03",
-              borderColor: isCopied ? "#d9d9d9" : "#fcba03",
+              backgroundColor: isCopied ? "#f0f2f5" : "rgb(252, 186, 3)",
+              borderColor: isCopied ? "#d9d9d9" : "rgb(252, 186, 3)",
               color: isCopied ? "rgba(0, 0, 0, 0.85)" : "white",
             }}
           >
