@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Input, Button, Card, Collapse, Typography, message } from "antd";
 import { CopyOutlined, CheckOutlined } from "@ant-design/icons";
-import "./styles.css"; // Importando o arquivo CSS
+import "./styles.css";
 
 const { Title, Text } = Typography;
 const { Panel } = Collapse;

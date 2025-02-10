@@ -37,3 +37,9 @@
     font-size: 18px !important; /* Subtítulos menores para mobile */
   }
 }
+
+@media print {
+  body {
+      display: none;
+  }
+}
