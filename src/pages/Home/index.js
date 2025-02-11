@@ -1,5 +1,4 @@
 import { lazy, Suspense } from "react";
-import SideDrawer from "components/SideDrawer";
 import "./styles.css";
 
 // Importações com lazy loading
@@ -11,9 +10,6 @@ const Carroussel = lazy(() => import("components/Carroussel"));
 const Home = () => {
   return (
     <>
-      {/* SideDrawer */}
-      <SideDrawer />
-
       {/* Conteúdo principal com fallback visível */}
       <main style={{ paddingTop: "77px" }}>
         <Suspense fallback={

@@ -1,112 +1,111 @@
 import styled from "styled-components";
 
-const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
-  max-width: 100%;
-
-  background-color: #282828;
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+export const AboutContainer = styled.div`
+  padding: 24px;
+  background: #282828;
+  min-height: 100vh;
   color: #fff;
   font-family: "Poppins", sans-serif;
+`;
 
-  > div {
-    @media screen and (max-width: 900px) {
-      width: 75%;
-    }
-    @media screen and (max-width: 750px) {
-      width: 85%;
-    }
-    @media screen and (max-width: 620px) {
-      margin-left: 25px;
-    }
+export const Header = styled.div`
+  text-align: center;
+  margin-bottom: 40px;
+`;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    @media screen and (max-height: 980px) {
-      width: 70%;
-    }
-    @media screen and (max-height: 1300px) {
-      width: 80%;
-    }
-    margin-top: 15vh;
-    @media screen and (max-width: 470px) {
-      margin-top: 10vh;
-    }
-    @media screen and (max-width: 350px) {
-      margin-top: 3vh;
-    }
-    > div:first-child {
-      font-weight: 1000;
-      color: #fc9003;
-      font-size: 3em;
-      @media (max-width: 850px) {
-        @media (max-height: 550px) {
-          font-size: 2.5em;
-        }
-      }
-      @media (max-width: 710px) {
-        @media (max-height: 550px) {
-          margin-top: -25px;
-          font-size: 2em;
-        }
-      }
-      @media (max-width: 710px) {
-        margin-top: -35px;
-      }
-      @media (max-width: 650px) {
-        font-size: 1.5em;
-        margin-top: -45px;
-      }
-      @media (max-width: 380px) {
-        font-size: 1.3em;
-        margin-top: -55px;
-      }
-      @media screen and (max-width: 600px) {
-        font-size: 2.5em;
-      }
-      @media screen and (max-width: 560px) {
-        font-size: 1.8em;
-        margin-top: -15px;
-      }
-      @media screen and (max-width: 350px) {
-        font-size: 1.5em;
-      }
-      @media screen and (max-width: 320px) {
-        font-size: 1.2em;
-      }
-    }
-    > div:last-child {
-      display: flex;
-      flex-direction: column;
-      > p {
-        @media screen and (max-width: 610px) {
-          font-size: 1.1em;
-        }
-        @media screen and (max-width: 550px) {
-          font-size: 1em;
-        }
-        @media screen and (max-width: 480px) {
-          margin: 0;
-        }
-        @media screen and (max-width: 380px) {
-          font-size: 0.9em;
-          margin: 0.2em;
-        }
-        @media screen and (max-width: 320px) {
-          margin: 0.4em;
-          margin-bottom: 0;
-        }
-        margin: 0.5em;
-        font-size: 1.2em;
-      }
-    }
+export const Title = styled.h1`
+  color: #fcba03;
+  font-size: 2.5em;
+  margin-top: 24px;
+
+  @media (max-width: 768px) {
+    font-size: 2em;
   }
 `;
 
-export default Container;
+export const Subtitle = styled.h3`
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 300;
+
+  @media (max-width: 768px) {
+    font-size: 1.2em;
+  }
+`;
+
+export const ContentCard = styled.div`
+  background: #333;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 24px auto;
+  max-width: 800px;
+`;
+
+export const SectionTitle = styled.h2`
+  color: #fcba03;
+  font-size: 1.8em;
+  margin-bottom: 16px;
+`;
+
+export const Paragraph = styled.p`
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 16px;
+`;
+
+export const Highlight = styled.span`
+  color: #fcba03;
+  font-weight: bold;
+`;
+
+export const Code = styled.span`
+  color: #fcba03;
+  background: #444;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+`;
+
+export const TechGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+`;
+
+export const TechItem = styled.div`
+  color: #fcba03;
+  background: #444;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  font-family: "Courier New", monospace;
+`;
+
+export const Actions = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+`;
+
+export const ActionButton = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 1em;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+
+  background: ${({ primary }) => (primary ? "#fcba03" : "transparent")};
+  color: ${({ primary }) => (primary ? "#282828" : "#fcba03")};
+  border: ${({ primary }) => (primary ? "none" : "1px solid #fcba03")};
+
+  &:hover {
+    background: ${({ primary }) => (primary ? "#e0a903" : "#444")};
+    transform: translateY(-2px);
+  }
+`;
