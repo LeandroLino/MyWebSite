@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import "./styles.css";
 
 // Importações com lazy loading
+const Contact = lazy(() => import("components/Contact"));
 const HomeScreen = lazy(() => import("components/Home"));
 const About = lazy(() => import("components/About"));
 const Technologies = lazy(() => import("components/Technologies"));
@@ -27,6 +28,7 @@ const Home = () => {
           {/* Renderize os componentes aqui */}
           <HomeScreen />
           <About />
+          <Contact/>
           <Technologies />
           <Carroussel />
         </Suspense>
